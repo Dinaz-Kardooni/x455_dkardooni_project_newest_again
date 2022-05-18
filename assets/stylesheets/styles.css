@@ -1,0 +1,367 @@
+* {
+  /* Defines how the width and height of an element are calculated: should they include padding and borders, or not. */
+  /* box-sizing: border-box; Width and height apply to all parts of the element: content, padding and borders */
+  /* box-sizing: content-box; Width and height only apply to the content of the element */
+  box-sizing: border-box;
+}
+
+html {background: #a731b6;
+
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* BEG styling navigation bar */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0px 0px 0px 0px;
+}
+
+nav ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 20px 15px 20px;
+  text-decoration: none;
+  width: auto;
+  font-family: monospace;
+}
+
+/* styling hover nav item */
+nav ul li a:hover {
+  background-color: #f80707;
+  text-decoration: none;
+  color: #fff;
+}
+
+.active-page {
+  background-color: rgba(250, 25, 5, 0.8);
+}
+
+.active-menu-item {
+  background-color: #f90303;
+}
+
+/* END styling navigation bar */
+
+/********** BEG for dropdown menu in small screen **********/
+.dropdown {
+  position: absolute;
+  display: none;
+  top: 0; /* top right bottom left work with position:absolute, set an absolute position where to put the dropdown menu */
+  right: 0px;
+}
+
+.dropbtn {
+  background-color: rgba(161, 11, 254, 0);
+  color: rgb(20, 24, 233);
+  padding: 21px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+}
+
+.dropdown-content {
+  display: none; /* set display to none, so dropdown menu won't show till hover dropdown */
+  position: absolute;
+  right: 0;
+  background-color: rgba(77, 80, 233, 0.8);
+  min-width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  line-height: normal; /* do this override/cascade the line-height set in carousel plugin */
+}
+
+.dropdown-content a:hover {
+  background-color: #e142ec;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover {
+  background-color: rgba(118, 32, 230, 0.8);
+}
+/********** END for dropdown menu in small screen **********/
+
+/* BEG styling hero screen*/
+.home-page {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  right: 0; /* need to have position set to "fixed" */
+  bottom: 0; /* need to have position set to "fixed" */
+  width: auto;
+  height: auto;
+  background: rgb(167, 10, 165) no-repeat center;
+  background-size: cover;
+  display: flex; /* for hero text */
+  justify-content: center; /* for hero text */
+  align-items: center; /* for hero text */
+  z-index: -1;
+}
+.hero-text {
+  color: #ffffff;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* END styling hero screen*/
+
+/* style page banner */
+header.images-and-text-01-dinaz {
+  background-color: rgb(73, 7, 123) url(../images/Brainwave-entrainment.png) no-repeat center; /* top center bottom - 1/3 of the image full height */
+  background-size: cover;
+  height: 450px;
+}
+
+header.page-3-dinaz {
+  /* add you own header here */
+  background-color: blueviolet;
+  background-size: cover;
+}
+
+header.page-4-dinaz {
+  /* add you own header here */
+  background-color: blueviolet;
+  background-size: cover;
+}
+
+header.page-5-dinaz {
+  background-color: blueviolet;
+  background-size: cover;
+  /* add you own header here */
+}
+
+header.page-6-dinaz {
+  /* add you own header here */
+  background-color: blueviolet;
+  background-size: cover;
+}
+
+/* BEG styling headings */
+h1 {
+  margin: 0px 0px 1em 0px;
+  color: #076d6f;
+  font-size: 2.7em;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h3 {
+  margin: 0px 0px 1.5em 0px;
+  color: #fbfbfb;
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/* END styling headings */
+
+/* Styling anchor link (hyperlink) */
+a {
+  color: #f4f7f8;
+  text-decoration: none;
+}
+
+/* BEG styling images */
+img.size01 {
+  max-width: 300px;
+  padding-bottom: 10px;
+}
+
+img.size02 {
+  max-width: 400px;
+  padding-bottom: 15px;
+}
+
+img.size03 {
+  max-width: 500px;
+  padding-bottom: 20px;
+}
+
+.padding-right {
+  padding-right: 15px;
+}
+
+.padding-left {
+  padding-left: 15px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+#gamma {
+  color: seagreen;
+}
+
+#beta {
+  color: orangered;
+}
+
+#alpha {
+  color: saddlebrown;
+}
+
+#theta {
+  color: saddlebrown;
+}
+
+#Delta {
+  color: saddlebrown;
+}
+
+/* END styling images */
+
+/* set padding from browser edges for content */
+article > div,
+footer > div {
+  /* padding: top right bottom left */
+  padding: 0px 40px 0px 40px;
+}
+
+@media screen and (max-width: 750px) {
+  /*header {
+    height: 240px;
+  }*/
+  header a.logo {
+    width: 120px;
+    height: 44px;
+  }
+  /*** for carousel area ***/
+  section > div.carousel-area {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+    /* padding: top right bottom left */
+    padding: 0px 40px 30px 40px;
+    border-right: none;
+    border-bottom: 1px solid #555;
+  }
+  /*** for carousel area ***/
+  article {
+    width: 100%;
+    float: none;
+    margin-bottom: 40px;
+  }
+  article > div {
+    margin: 0px 40px;
+    /* padding: top right bottom left */
+    padding: 0px 0px 30px 0px;
+    border-right: none;
+    border-bottom: 1px solid #555;
+  }
+  aside {
+    width: 100%;
+    float: none;
+  }
+  aside p.to-top {
+    display: block;
+  }
+
+  nav {
+    /* padding: top right bottom left */
+    padding: 60px 0px 0px 20px;
+  }
+  nav > ul {
+    padding-left: 0px;
+    padding-right: 20px;
+  }
+  nav > ul > li > a {
+    /* padding: top right bottom left */
+    padding: 8px 12px 10px 12px;
+  }
+  .flex-container > div {
+    width: 25%;
+  }
+  .flex-container > span > h2 {
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  video {
+    display: none;
+  }
+}
+
+/********** BEG for dropdown menu in small screen **********/
+@media screen and (max-width: 500px) {
+  nav > ul {
+    display: none;
+  }
+  header.food-page {
+    background: #eee url(../images/food-02.jpg) no-repeat center; /* top center bottom - 1/3 of the image full height */
+    background-size: cover;
+    height: 270px;
+  }
+  header.page-3 {
+    /* add you own header here */
+  }
+  header.page-4 {
+    /* add you own header here */
+  }
+  header.page-5 {
+    /* add you own header here */
+  }
+  header.page-6 {
+    /* add you own header here */
+  }
+  .dropdown {
+    display: block;
+  }
+  .flex-container > div {
+    width: 50%;
+  }
+  aside > div > div.scrolling {
+    height: 300px;
+  }
+}
+/********** END for dropdown menu in small screen **********/
